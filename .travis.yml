@@ -1,0 +1,16 @@
+sudo: required
+dist: trusty
+language: generic
+
+compiler:
+  - gcc
+
+install: 
+  - cd $HOME
+  - git clone https://github.com/grassjelly/test
+  - cd test
+  - ./install
+  
+notifications:
+  email:
+    - jimenojmm@gmail.com

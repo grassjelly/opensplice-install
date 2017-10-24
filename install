@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+set -e
+
+# sudo apt-get update
+# sudo apt-get install -y gawk flex bison perl gsoap
+
+cd $HOME
+git clone https://github.com/PrismTech/opensplice.git
+cd opensplice
+
+source ./configure x86_64.linux-dev
+
+export INCLUDE_SERVICES_CMSOAP=no
+
+make
+make install
+
+echo "alias ospl=\"source $HOME/opensplice/install/HDE/x86_64.linux-dev/release.com\"" >> ~/.bashrc
+
