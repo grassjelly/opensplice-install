@@ -7,7 +7,7 @@ compiler:
 
 install: 
   - cd $HOME
-  - git clone https://github.com/grassjelly/test
+  - git clone https://github.com/grassjelly/opensplice-install
   - cd test
   - ./install
   
