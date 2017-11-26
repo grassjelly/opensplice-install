@@ -29,4 +29,4 @@ make install
 
 echo "alias ospl=\"source $HOME/opensplice/install/HDE/$TARGET/release.com\"" >> ~/.bashrc
 source $HOME/.bashrc
-ospl
+source $HOME/opensplice/install/HDE/$TARGET/release.com
