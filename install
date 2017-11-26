@@ -14,17 +14,19 @@ ARCH=$(uname -i)
 if [ $ARCH == "x86_64" ]
     then
         echo "Installing x86_64.linux-dev"
-        source ./configure x86_64.linux-dev
-
+        TARGET=x86_64.linux-dev
 else
     echo "Installing armv6l.linux-dev"
-    source ./configure armv6l.linux-dev
+    TARGET=armv6l.linux-dev
 fi
+
+source ./configure $TARGET
 
 export INCLUDE_SERVICES_CMSOAP=no
 
 make
 make install
 
-echo "alias ospl=\"source $HOME/opensplice/install/HDE/x86_64.linux-dev/release.com\"" >> ~/.bashrc
-
+echo "alias ospl=\"source $HOME/opensplice/install/HDE/$TARGET/release.com\"" >> ~/.bashrc
+source $HOME/.bashrc
+ospl
