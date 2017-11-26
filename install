@@ -9,6 +9,19 @@ cd $HOME
 git clone https://github.com/PrismTech/opensplice.git
 cd opensplice
 
+ARCH=$(uname -i)
+
+if [ $ARCH == "x86_64" ]
+    then
+        echo "Installing x86_64.linux-dev"
+        source ./configure x86_64.linux-dev
+
+else
+    echo "Installing armv6l.linux-dev"
+    source ./configure armv6l.linux-dev
+    exit 1
+
+
 source ./configure x86_64.linux-dev
 
 export INCLUDE_SERVICES_CMSOAP=no
