@@ -20,9 +20,7 @@ else
     echo "Installing armv6l.linux-dev"
     source ./configure armv6l.linux-dev
     exit 1
-
-
-source ./configure x86_64.linux-dev
+fi
 
 export INCLUDE_SERVICES_CMSOAP=no
 
