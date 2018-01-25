@@ -6,7 +6,7 @@ sudo apt-get update
 sudo apt-get install -y gawk flex bison perl gsoap
 
 cd $HOME
-git clone https://github.com/PrismTech/opensplice.git
+git clone https://github.com/ADLINK-IST/opensplice.git
 cd opensplice
 
 ARCH=$(uname -i)
